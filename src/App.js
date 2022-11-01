@@ -1,5 +1,5 @@
-import Homepage from "./components/homepage.component";
-
+import Homepage from "./pages/homepage/homepage";
+import "./App.css";
 function App() {
   return (
     <div>
