@@ -4,6 +4,8 @@ import CustomBtn from "../custom-button/CustomBtn";
 import FormInput from "../form-input/form-input";
 import "./signIn.scss";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils.js";
+
 const SignIn = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -44,7 +46,12 @@ const SignIn = () => {
           required
           handleChange={handleChange}
         />
-        <CustomBtn type="submit">Sign in</CustomBtn>
+        <div className="buttons">
+          <CustomBtn type="submit">Sign in</CustomBtn>
+          <CustomBtn onClick={signInWithGoogle} isGoogleSignIn>
+            Sign in with Google
+          </CustomBtn>
+        </div>
       </form>
     </div>
   );
